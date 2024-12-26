@@ -1,5 +1,6 @@
 from aiohttp import web
 
+
 app = web.Application()
 
 async def handler_kolicnik(request):
