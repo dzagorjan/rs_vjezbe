@@ -1,4 +1,3 @@
-import asyncio, aiohttp
 from aiohttp import web
 
 app = web.Application()
