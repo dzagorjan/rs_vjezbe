@@ -14,7 +14,7 @@ class Narudzba(BaseModel):
    indentifikator: int
    ime_kupca: str
    stol_info: Stol_Info
-   lista_jela: Jelo
+   lista_jela: list[Jelo]
    ukupna_cijena: float 
 
 class RestaurantOrder(Narudzba):
