@@ -35,7 +35,7 @@ def dohvati_objavu(id:int):
 def dohvati_objavu_korisnik(request:LoginRequest):
 
     response = requests.get("http://authapi:9000/login", json=request.model_dump())
-    if response.status_code !=200:
+    if response.status_code !=200 or not response.json("auth_ok"):
         raise HTTPException(status_code=400, detail="Neispravni podaci")
 
     return [objava for objava in objave if objava['korisnik'] == request.korisnik]
