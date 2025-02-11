@@ -1,0 +1,19 @@
+
+services:
+  socialapi_microservice:
+    image: socialapi:2.0
+    ports:
+    - 3500:3500
+    networks:
+      - interna_mreza
+
+  authapi_microservice:
+    image: authapi:2.0
+    ports:
+    - 9000:9000
+    networks:
+      - interna_mreza
+
+networks:
+  interna_mreza:
+    driver: bridge
